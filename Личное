@@ -1,22 +1,24 @@
-#include <iostream>
-#include <cmath>
-using namespace std;
+#include <cmath>// Математические функции
+using namespace std;// Использование std
 
-int main() {
-    double x1, y1, x2, y2, x3, y3;
-    
+int main()//Начало
+{
+    double x1, y1, x2, y2, x3, y3; // Координаты точек
+
     cout << "input: ";
     cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 
+    // Длины сторон треугольника
     double a, b, c;
 
+    // Расчет сторон по формуле расстояния
     a = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
     b = sqrt((x3 - x2)*(x3 - x2) + (y3 - y2)*(y3 - y2));
     c = sqrt((x1 - x3)*(x1 - x3) + (y1 - y3)*(y1 - y3));
 
+    // Периметр
     double p = a + b + c;
 
     cout << "p = " << p;
-
-    return 0;
+    return 0;  // Успешное завершение
 }
